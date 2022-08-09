@@ -1,0 +1,13 @@
+###
+GET http://localhost:8080/api/measurement
+
+###
+GET http://localhost:8080/api/measurement/2
+
+###
+POST http://localhost:8080/api/measurement
+Content-Type: application/json
+
+{
+  "name": "Maria Jones"
+}

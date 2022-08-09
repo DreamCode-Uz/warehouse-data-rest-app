@@ -5,8 +5,11 @@ spring:
     password: root
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
   data:
     rest:
       base-path: api
+server:
+  error:
+    include-message: always

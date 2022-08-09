@@ -1,0 +1,13 @@
+###
+GET http://localhost:8080/api/product
+
+###
+GET http://localhost:8080/api/product/2
+
+###
+POST http://localhost:8080/api/product
+Content-Type: application/json
+
+{
+  "name": "Maria Jones"
+}

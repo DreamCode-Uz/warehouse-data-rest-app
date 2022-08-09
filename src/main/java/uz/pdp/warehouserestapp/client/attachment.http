@@ -1,0 +1,13 @@
+###
+GET http://localhost:8080/api/attachment
+
+###
+GET http://localhost:8080/api/attachment/2
+
+###
+POST http://localhost:8080/api/attachment
+Content-Type: application/json
+
+{
+  "name": "Maria Jones"
+}

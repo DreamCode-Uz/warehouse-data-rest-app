@@ -1,0 +1,13 @@
+###
+GET http://localhost:8080/api/currency
+
+###
+GET http://localhost:8080/api/currency/2
+
+###
+POST http://localhost:8080/api/currency
+Content-Type: application/json
+
+{
+  "name": "Maria Jones"
+}
