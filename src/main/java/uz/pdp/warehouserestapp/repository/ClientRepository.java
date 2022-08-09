@@ -1,9 +1,9 @@
 package uz.pdp.warehouserestapp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import uz.pdp.warehouserestapp.entity.Supplier;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import uz.pdp.warehouserestapp.entity.Client;
 
-@Repository
-public interface SupplierRepository extends JpaRepository<Supplier, Integer> {
+@RepositoryRestResource(path = "client", collectionResourceRel = "data")
+public interface ClientRepository extends JpaRepository<Client, Integer> {
 }
