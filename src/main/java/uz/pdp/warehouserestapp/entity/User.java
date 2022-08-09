@@ -7,12 +7,12 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import java.util.Set;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
+@Entity(name = "users")
 public class User {
 
     @Id
@@ -42,5 +42,5 @@ public class User {
     private boolean active = true;
 
     @ManyToMany
-    private Set<User> users;
+    private List<Warehouse> warehouses;
 }
