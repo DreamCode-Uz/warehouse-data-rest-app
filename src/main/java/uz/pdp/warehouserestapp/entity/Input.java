@@ -37,6 +37,6 @@ public class Input {
     @Column(nullable = false)
     private String factureNumber;
 
-    @Column(nullable = false, unique = true)
+    @Column(unique = true)
     private String code;
 }

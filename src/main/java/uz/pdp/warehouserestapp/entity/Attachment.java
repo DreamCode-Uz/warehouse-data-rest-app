@@ -27,4 +27,10 @@ public class Attachment {
     @NotNull
     @Column
     private String contentType;
+
+    public Attachment(String name, Long size, String contentType) {
+        this.name = name;
+        this.size = size;
+        this.contentType = contentType;
+    }
 }

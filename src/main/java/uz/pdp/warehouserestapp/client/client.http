@@ -9,5 +9,6 @@ POST http://localhost:8080/api/client
 Content-Type: application/json
 
 {
-  "name": "Maria Jones"
+  "name": "Alex Markus",
+  "phoneNumber": "998911234568"
 }

@@ -9,5 +9,9 @@ POST http://localhost:8080/api/input
 Content-Type: application/json
 
 {
-  "name": "Maria Jones"
+  "date": "2022-03-12",
+  "warehouseId": 4,
+  "supplierId": 1,
+  "currencyId": 2,
+  "factureNumber": "INV-12345"
 }

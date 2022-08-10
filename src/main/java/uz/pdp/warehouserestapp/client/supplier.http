@@ -9,5 +9,6 @@ POST http://localhost:8080/api/supplier
 Content-Type: application/json
 
 {
-  "name": "Maria Jones"
+  "name": "Abror Abrorivich",
+  "phoneNumber": "998901234567"
 }

@@ -9,7 +9,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
+@Entity(name = "photo_content")
 public class AttachmentContent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,4 +20,9 @@ public class AttachmentContent {
 
     @OneToOne
     private Attachment attachment;
+
+    public AttachmentContent(byte[] bytes, Attachment attachment) {
+        this.bytes = bytes;
+        this.attachment = attachment;
+    }
 }

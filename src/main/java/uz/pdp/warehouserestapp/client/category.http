@@ -1,0 +1,13 @@
+###
+GET http://localhost:8080/api/category
+
+###
+GET http://localhost:8080/api/category/2
+
+###
+POST http://localhost:8080/api/category
+Content-Type: application/json
+
+{
+  "name": "Mebel"
+}

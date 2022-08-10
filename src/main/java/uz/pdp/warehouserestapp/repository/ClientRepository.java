@@ -9,7 +9,7 @@ import javax.validation.constraintvalidation.SupportedValidationTarget;
 import javax.validation.constraintvalidation.ValidationTarget;
 
 @SupportedValidationTarget(ValidationTarget.ANNOTATED_ELEMENT)
-@RepositoryRestResource(path = "client", collectionResourceRel = "data")
+@RepositoryRestResource(path = "client", collectionResourceRel = "clients")
 public interface ClientRepository extends JpaRepository<Client, Integer> {
       @Override
     <S extends Client> S save(@Valid S entity);
