@@ -2,7 +2,7 @@
 GET http://localhost:8080/api/measurement
 
 ###
-GET http://localhost:8080/api/measurement/2
+GET http://localhost:8080/api/measurement/1
 
 ###
 POST http://localhost:8080/api/measurement

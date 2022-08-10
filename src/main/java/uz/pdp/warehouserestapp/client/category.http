@@ -9,5 +9,6 @@ POST http://localhost:8080/api/category
 Content-Type: application/json
 
 {
-  "name": "Mebel"
+  "name": "Divan",
+  "categoryId": 1
 }

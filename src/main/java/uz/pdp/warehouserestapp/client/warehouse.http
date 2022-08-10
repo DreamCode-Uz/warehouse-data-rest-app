@@ -9,5 +9,5 @@ POST http://localhost:8080/api/warehouse
 Content-Type: application/json
 
 {
-  "name": "Maria Jones"
+  "name": "Warehouse - 2"
 }
