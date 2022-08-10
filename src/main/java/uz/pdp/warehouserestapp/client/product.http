@@ -9,5 +9,7 @@ POST http://localhost:8080/api/product
 Content-Type: application/json
 
 {
-  "name": "Electronic"
+  "name": "Iphone",
+  "Category": 1,
+  "Measurement": 1
 }

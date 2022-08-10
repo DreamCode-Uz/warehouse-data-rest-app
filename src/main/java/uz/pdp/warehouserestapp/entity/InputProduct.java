@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @AllArgsConstructor
@@ -24,15 +23,20 @@ public class InputProduct {
     @ManyToOne(optional = false)
     private Input input;
 
-    @NotNull
-    @Column(name = "amount")
+    @Column(name = "amount", nullable = false)
     private Double amount;
 
-    @NotNull
-    @Column(name = "price")
+    @Column(name = "price", nullable = false)
     private Double price;
 
-    @NotNull
-    @Column(name = "expire_date")
+    @Column(name = "expire_date", nullable = false)
     private Date expireDate;
+
+    public InputProduct(Product product, Input input, Double amount, Double price, Date expireDate) {
+        this.product = product;
+        this.input = input;
+        this.amount = amount;
+        this.price = price;
+        this.expireDate = expireDate;
+    }
 }

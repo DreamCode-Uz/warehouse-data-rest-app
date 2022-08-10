@@ -1,0 +1,17 @@
+###
+GET http://localhost:8080/api/input/product
+
+###
+GET http://localhost:8080/api/input/product/2
+
+###
+POST http://localhost:8080/api/input/product
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "inputId": 1,
+  "amount": 320.2,
+  "price": 1200,
+  "expireDate": "2023-01-08"
+}

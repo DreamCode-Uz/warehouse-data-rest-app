@@ -8,6 +8,7 @@ import uz.pdp.warehouserestapp.entity.template.AbsEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,4 +24,7 @@ public class Product extends AbsEntity {
 
     @ManyToOne(optional = false)
     private Measurement measurement;
+
+    @OneToOne
+    private Attachment attachment;
 }

@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @AllArgsConstructor
@@ -21,22 +20,27 @@ public class Input {
     @Column(name = "date", nullable = false)
     private Date date;
 
-    @NotNull(message = "WarehouseId should be not null")
     @ManyToOne(optional = false)
     private Warehouse warehouse;
 
-    @NotNull(message = "SupplierId should be not null")
     @ManyToOne(optional = false)
     private Supplier supplier;
 
-    @NotNull(message = "CurrencyId should be not null")
     @ManyToOne(optional = false)
     private Currency currency;
 
-    @NotNull(message = "FactureNumber should be not null")
     @Column(nullable = false)
     private String factureNumber;
 
     @Column(unique = true)
     private String code;
+
+    public Input(Date date, Warehouse warehouse, Supplier supplier, Currency currency, String factureNumber, String code) {
+        this.date = date;
+        this.warehouse = warehouse;
+        this.supplier = supplier;
+        this.currency = currency;
+        this.factureNumber = factureNumber;
+        this.code = code;
+    }
 }
