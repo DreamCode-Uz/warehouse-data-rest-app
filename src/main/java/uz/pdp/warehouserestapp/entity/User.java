@@ -5,42 +5,43 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import java.util.List;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity(name = "users")
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotNull
     @Column(nullable = false)
-    private String firstName;
+    private String firstname;
 
-    @NotNull
     @Column(nullable = false)
-    private String lastName;
+    private String lastname;
 
-    @NotNull
-    @Pattern(regexp = "^\\\\d{10}$")
-    @Column(nullable = false)
-    private String phoneNumber;
-
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String code;
-
-    @NotNull
     @Column(nullable = false)
     private String password;
+
+    @Column(nullable = false, unique = true)
+    private String phoneNumber;
+
+    @Column(nullable = false)
+    private String code;
 
     private boolean active = true;
 
     @ManyToMany
-    private List<Warehouse> warehouses;
+    private Set<Warehouse> warehouses;
+
+    public User(String firstname, String lastname, String password, String phoneNumber, String code, Set<Warehouse> warehouses) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.code = code;
+        this.warehouses = warehouses;
+    }
 }
