@@ -13,7 +13,7 @@ import static org.springframework.http.ResponseEntity.ok;
 import static org.springframework.http.ResponseEntity.status;
 
 @RestController
-@RequestMapping("/api/input")
+@RequestMapping("/api/input/product")
 public class InputProductController {
     private final InputProductService service;
 

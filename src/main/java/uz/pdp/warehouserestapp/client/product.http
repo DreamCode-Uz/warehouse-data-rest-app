@@ -10,6 +10,7 @@ Content-Type: application/json
 
 {
   "name": "Iphone",
-  "Category": 1,
-  "Measurement": 1
+  "categoryId": 1,
+  "measurementId": 1,
+  "photoId": 2
 }
