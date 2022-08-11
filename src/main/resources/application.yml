@@ -1,26 +1,22 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/lesson2
+    url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: root
-#    for @Lob attachment
     hikari:
       auto-commit: false
-
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: true
-#    for data-rest
   data:
     rest:
       base-path: api
-#      for attachment
   servlet:
     multipart:
       enabled: true
-      max-file-size: 10MB
-      max-request-size: 10MB
+      max-file-size: 25MB
+      max-request-size: 25MB
 server:
   error:
     include-message: always
