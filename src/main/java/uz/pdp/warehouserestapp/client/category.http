@@ -2,13 +2,13 @@
 GET http://localhost:8080/api/category
 
 ###
-GET http://localhost:8080/api/category/2
+GET http://localhost:8080/api/category/1
 
 ###
 POST http://localhost:8080/api/category
 Content-Type: application/json
 
 {
-  "name": "Divan",
-  "categoryId": 1
+  "name": "Electronic",
+  "active": true
 }
